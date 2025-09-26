@@ -1,0 +1,102 @@
+/* ===== Body ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+  color: #333;
+  padding: 25px;
+}
+
+/* ===== Header ===== */
+h1 {
+  text-align: center;
+  color: #1565c0;
+  font-size: 3em;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 50px;
+}
+
+/* ===== Sections ===== */
+section {
+  margin: 30px 0;
+  padding: 25px;
+  border-radius: 20px;
+  background: #ffffffcc;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+section:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+  background: #ffffffee;
+}
+
+/* ===== Titles ===== */
+h2 {
+  color: #2e7d32;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #ff7043, #ffca28);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: linear-gradient(45deg, #ff8a65, #ffd54f);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* ===== Output Boxes ===== */
+.output {
+  padding: 20px;
+  min-height: 60px;
+  font-size: 1.4em;
+  line-height: 1.6;
+  border-radius: 15px;
+  background: linear-gradient(to right, #ba68c8, #9575cd);
+  color: #fff;
+  overflow-x: auto;
+  transition: background 0.5s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== Individual Number/Color Boxes ===== */
+.output div, .output span {
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px 0;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.output div:hover, .output span:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* ===== Glowing Animation ===== */
+@keyframes glow {
+  0% { text-shadow: 0 0 2px #fff, 0 0 5px #fff; }
+  50% { text-shadow: 0 0 8px #fff, 0 0 15px #fff; }
+  100% { text-shadow: 0 0 2px #fff, 0 0 5px #fff; }
+}
+
+.output div, .output span {
+  animation: glow 1.5s infinite alternate;
+}
